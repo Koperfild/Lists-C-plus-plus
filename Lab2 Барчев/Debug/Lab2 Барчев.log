@@ -1,17 +1,9 @@
-﻿Сборка начата 06.04.2015 16:47:34.
-     1>Проект "C:\Users\Julia1\Documents\GitHub\Lab2 Барчев\Lab2 Барчев\Lab2 Барчев.vcxproj" в узле 2 (целевые объекты Build).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Lab2 Барчев.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt List.cpp
-         List.cpp
-     1>c:\users\julia1\documents\github\lab2 барчев\lab2 барчев\list.cpp(1): warning C4627: #include "List.h": пропущен при поиске использования предкомпилированного заголовка
-                 Добавление директивы в "stdafx.h" или перестройка предкомпилированного заголовка
-     1>c:\users\julia1\documents\github\lab2 барчев\lab2 барчев\list.cpp(4): error C2653: List: не является именем класса или пространства имен
-     1>c:\users\julia1\documents\github\lab2 барчев\lab2 барчев\list.cpp(5): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
-     1>c:\users\julia1\documents\github\lab2 барчев\lab2 барчев\list.cpp(6): warning C4508: List: функция должна возвращать значение; предполагается возвращаемый тип "void"
-     1>c:\users\julia1\documents\github\lab2 барчев\lab2 барчев\list.cpp(8): error C2653: List: не является именем класса или пространства имен
-     1>c:\users\julia1\documents\github\lab2 барчев\lab2 барчев\list.cpp(8): fatal error C1903: не удается восстановить после предыдущих ошибок; остановка компиляции
-     1>Сборка проекта "C:\Users\Julia1\Documents\GitHub\Lab2 Барчев\Lab2 Барчев\Lab2 Барчев.vcxproj" завершена (целевые объекты Build) с ошибкой.
+﻿Build started 07.04.2015 0:32:07.
+     1>Project "E:\GitHub\Lists-C-plus-plus\Lab2 Барчев\Lab2 Барчев.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         Lab2 Барчев.vcxproj -> E:\GitHub\Lists-C-plus-plus\Debug\Lab2 Барчев.exe
+     1>Done Building Project "E:\GitHub\Lists-C-plus-plus\Lab2 Барчев\Lab2 Барчев.vcxproj" (Build target(s)).
 
-Ошибка сборки.
+Build succeeded.
 
-Затраченное время: 00:00:00.29
+Time Elapsed 00:00:00.61

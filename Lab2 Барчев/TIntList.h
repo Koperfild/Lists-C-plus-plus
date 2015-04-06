@@ -4,11 +4,12 @@
 class TIntList : public List
 {
 public:
-	TIntList(int value)
+	typedef struct TIntList
 	{
-		this->value = &value;
-	}
-	void printList() override
+		int value;
+		TIntList* pnext;
+	}TIntList;
+	virtual void printList()
 	{
 		List* temp = *this->Head;
 		while (temp != NULL){
@@ -16,9 +17,9 @@ public:
 			temp = temp->pnext;
 		}
 	}
-	
-private:
-	int Compare(void* first, void* second) override
+
+
+	virtual int Compare(void* first, void* second)
 	{
 		return *(int*)first - *(int*)second;//Проверить 
 	}

@@ -1,6 +1,18 @@
-#include "List.h"
-#include "stdafx.h"
 
+#include "stdafx.h"
+#include "List.h"
+
+VirtualList::VirtualList()
+{
+}
+
+
+VirtualList::~VirtualList()
+{
+}
+
+//List **List::Head = 0;
+//List **List::Tail = 0;
 List::List()
 {
 }
@@ -9,26 +21,26 @@ List::~List()
 {
 }
 
-void List::Insert(List* list)
+void List::Insert(void* listNode)
 {
 	if (*Head == NULL){
-		*Head = list;
-		*Tail = list;
+		*Head = listNode;
+		*Tail = listNode;
 	}
 	else {
-		(**Tail).pnext = list;
-		*Tail = list;
+		(*Tail)->pnext = listNode;
+		*Tail = listNode;
 	}
-	list->pnext = NULL;//Необязательно. Главное реализовать обнуление в конструкторе 
+	//list->pnext = NULL;//Необязательно. Главное реализовать обнуление в конструкторе 
 }
-void List::Delete(List* list)
+void List::Delete(void* listNode)
 {
-	if (list == NULL) return;//Хз, может эту проверку надо делать после find но перед вызовом DeleteHuman
+	if (listNode == NULL) return;//Хз, может эту проверку надо делать после find но перед вызовом DeleteHuman
 	if (*Head == NULL) return;
 	//, _List **HeadPtr, _List **TailPtr){
-	List* PrevElm = *Head;
-	List* ElmForDel = 0;
-	void* ValueToDel = list->value;
+	void* PrevElm = *Head;
+	void* ElmForDel = 0;
+	//void* ValueToDel = list->value;
 
 	while (PrevElm->pnext != 0)//Что будет если 
 	{
@@ -59,4 +71,14 @@ void List::Delete(List* list)
 	}
 	//Удаляем вне этого метода
 	//delete ElmForDel;
+}
+
+
+void List::printList()
+{
+}
+
+int List::Compare(void*, void*)
+{
+	return 1;
 }
