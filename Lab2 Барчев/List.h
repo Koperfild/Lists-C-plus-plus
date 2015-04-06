@@ -22,8 +22,8 @@ public:
 	//List* pnext;
 	
 
-	void** Head;
-	void** Tail;
+	foo** Head;
+	foo** Tail;
 
 	void Delete(ListNode* list);
 	void Insert(ListNode* list);
@@ -35,18 +35,19 @@ class foo
 {
 public:
 	foo* pnext; 
+	virtual int Compare(void*, void*) abstract{};
 };
 //ћожно запихнуть структуру внутрь класса TIntList
 class ListNode : public foo
 {
-	int value;
 	ListNode(int a)
 	{
 		this->value = a;
 		this->pnext = NULL;
 	}
 public:
-	int Compare(void* first, void* second)
+	int value;
+	int Compare(foo* first, foo* second)
 	{
 		return ((ListNode*)first)->value - ((ListNode*)second)->value;
 	}

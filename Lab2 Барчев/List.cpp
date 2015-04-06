@@ -33,18 +33,18 @@ void List::Insert(void* listNode)
 	}
 	//list->pnext = NULL;//Необязательно. Главное реализовать обнуление в конструкторе 
 }
-void List::Delete(void* listNode)
+void List::Delete(foo* fooItem)
 {
-	if (listNode == NULL) return;//Хз, может эту проверку надо делать после find но перед вызовом DeleteHuman
+	if (fooItem == NULL) return;//Хз, может эту проверку надо делать после find но перед вызовом DeleteHuman
 	if (*Head == NULL) return;
 	//, _List **HeadPtr, _List **TailPtr){
-	void* PrevElm = *Head;
-	void* ElmForDel = 0;
+	foo* PrevElm = *Head;
+	foo* ElmForDel = 0;
 	//void* ValueToDel = list->value;
 
 	while (PrevElm->pnext != 0)//Что будет если 
 	{
-		if (Compare(PrevElm->pnext->value, list->value) == 0){
+		if (foo::Compare(PrevElm->pnext, fooItem) == 0){
 			ElmForDel = list;
 			break;
 		}
